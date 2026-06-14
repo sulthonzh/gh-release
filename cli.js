@@ -36,7 +36,10 @@ function getPreviousTag(tags, currentTag) {
 }
 
 function getCommits(repo, from, to, includeMerge) {
-  const range = from ? `${from}..${to || "HEAD"}` : to ? `${to}` : "HEAD";
+  let range;
+  if (from) range = `${from}..${to || "HEAD"}`;
+  else if (to) range = `${to}`;
+  else range = "HEAD";
   const cmd = includeMerge
     ? `git log ${range} --pretty=format:"%H|%s|%an|%ad" --date=short`
     : `git log ${range} --no-merges --pretty=format:"%H|%s|%an|%ad" --date=short`;
