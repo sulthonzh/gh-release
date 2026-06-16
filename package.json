@@ -1,11 +1,15 @@
 {
-  "name": "gh-release",
+  "name": "@quadbyte/gh-release",
   "version": "1.0.0",
   "description": "Generate release notes from git history — categorize commits, output text/json/markdown",
   "type": "module",
+  "files": ["cli.js", "lib/", "README.md", "LICENSE"],
   "bin": { "gh-release": "./cli.js" },
   "scripts": { "test": "node --test test.test.mjs" },
   "keywords": ["git", "release-notes", "changelog", "cli", "github"],
   "license": "MIT",
-  "engines": { "node": ">=18" }
+  "engines": { "node": ">=18" },
+  "publishConfig": {
+    "access": "public"
+  }
 }
