@@ -3,13 +3,35 @@
   "version": "1.0.0",
   "description": "Generate release notes from git history — categorize commits, output text/json/markdown",
   "type": "module",
-  "files": ["cli.js", "lib/", "README.md", "LICENSE"],
-  "bin": { "gh-release": "./cli.js" },
-  "scripts": { "test": "node --test test.test.mjs" },
-  "keywords": ["git", "release-notes", "changelog", "cli", "github"],
+  "files": [
+    "cli.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "gh-release": "./cli.js"
+  },
+  "scripts": {
+    "test": "node --test test.test.mjs"
+  },
+  "keywords": [
+    "git",
+    "release-notes",
+    "changelog",
+    "cli",
+    "github"
+  ],
   "license": "MIT",
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "repository": "sulthonzh/gh-release",
+  "homepage": "https://github.com/sulthonzh/gh-release#readme",
+  "bugs": {
+    "url": "https://github.com/sulthonzh/gh-release/issues"
+  },
+  "author": "sulthonzh"
 }
